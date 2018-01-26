@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="limejump">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
   <title>Limejump Test</title>
   <base href="/">
   <!-- inject:js -->
@@ -8,7 +10,14 @@
   <!-- inject:css -->
   <!-- endinject -->
 </head>
-<body>
-  <main class="container" ui-view></main>
+<body ng-controller="CompanyIndexCtrl as companyIndex">
+  <div class="wrapper">
+    <main class="container" ui-view>
+      <div ng-repeat="company in companyIndex.all" class="names">
+        <h2>{{ company.name }}</h2>
+      </div>
+    </main>
+
+  </div>
 </body>
 </html>
