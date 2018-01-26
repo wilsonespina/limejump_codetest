@@ -5,21 +5,29 @@ angular
 Company.$inject = [];
 function Company() {
   const all = [{
-    name: 'Limejump'
+    name: 'Limejump',
+    address: 'test address'
   },{
-    name: 'Ford'
+    name: 'Ford',
+    address: 'test address'
   },{
-    name: 'Samsung'
+    name: 'Samsung',
+    address: 'test address'
   },{
-    name: 'National Grid'
+    name: 'National Grid',
+    address: 'test address'
   },{
-    name: 'Barclays'
+    name: 'Barclays',
+    address: 'test address'
   },{
-    name: 'Apple'
+    name: 'Apple',
+    address: 'test address'
   },{
-    name: 'Nike'
+    name: 'Nike',
+    address: 'test address'
   },{
-    name: 'Sony'
+    name: 'Sony',
+    address: 'test address'
   }];
   return {
     query() {
