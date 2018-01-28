@@ -1,5 +1,6 @@
 angular
   .module('limejump', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'highcharts-ng'
   ]);

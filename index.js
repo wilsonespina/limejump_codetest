@@ -6,9 +6,10 @@ mongoose.plugin(require('./lib/globalToJSON'));
 mongoose.Promise = require('bluebird');
 const { port, env, dbURI } = require('./config/environment');
 const routes = require('./config/routes');
-
+const cors = require('cors');
 const app = express();
 
+app.use(cors());
 mongoose.connect(dbURI);
 
 if(env !== 'test') app.use(morgan('dev'));

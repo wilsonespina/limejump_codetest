@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const companies = require('../controllers/companies');
 const charts = require('../controllers/charts');
+// const proxies = require('../controllers/proxies');
 
 router.route('/part1')
   .get(companies.index);
@@ -12,6 +13,8 @@ router.route('/part1/:id')
 router.route('/part2')
   .get(charts.index);
 
+// router.route('/part2')
+//   .get(proxies.chart);
 
 router.all('/*', (req, res) => res.notFound());
 
