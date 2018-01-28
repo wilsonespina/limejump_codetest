@@ -1,50 +1,172 @@
-angular.module('limejump')
-.controller('HighchartsController', HighchartsController);
-
-
-function HighchartsController(StatsService, $log, $timeout, $scope) {
-  const ctrl = this;
-
-  ctrl.chartConfig = {
-    options: {
-      chart: {
-        type: 'area'
-      }
-    },
-
-    title: {
-      text: 'Network Usage - Last 60 Minutes'
-    },
-    yAxis: {
-      title: {
-        text: 'Throughput MBit/s'
-      }
-    },
-    xAxis: {
-      title: {
-        text: 'Minutes'
-      },
-      categories: ['-55', '-50', '-45', '-40', '-35', '-30',
-        '-25', '-20', '-15', '-10', '-05', '0']
-    },
-    plotOptions: {
-      line: {
-        dataLabels: {
-          enabled: true
-        },
-        enableMouseTracking: true
-      }
-    },
-    series: [
-      {
-        name: 'Inbound',
-        data: [29.9, 71.5, 25.4, 43.2, 37.0, 33.0, 35.6, 48.5, 21.4, 19.1, 16.6, 54.4]
-      },
-      {
-        name: 'Outbound',
-        data: [19.3, 56.3, 23.1, 38.5, 32.9, 27.0, 30.6, 42.3, 17.4, 12.0, 9.1, 34.0]
-      }
-    ]
-  };
-
-}
+// angular
+//   .module('limejump')
+//   .controller('HighchartsController', function ($scope) {
+//
+//     $scope.chartConfig = {
+//       subtitle: {
+//         text: 'Click and drag to zoom in.'
+//       },
+//       chart: {
+//         height: 500,
+//         width: 500,
+//         backgroundColor: 'transparent',
+//         zoomType: 'xy',
+//         resetZoomButton: {
+//           position: {
+//             x: 0,
+//             y: -35
+//           },
+//           theme: {
+//             fill: 'white',
+//             stroke: 'silver',
+//             r: 0,
+//             states: {
+//               hover: {
+//                 fill: '#41739D',
+//                 style: {
+//                   color: 'white'
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       },
+//       navigator: {
+//         enabled: true,
+//         series: {
+//           data: []
+//         }
+//       },
+//       rangeSelector: {
+//         enabled: false
+//       },
+//       plotOptions: {
+//         series: {
+//           lineWidth: 1,
+//           fillOpacity: 0.5
+//
+//         },
+//         column: {
+//           stacking: 'normal'
+//         },
+//         area: {
+//           stacking: 'normal',
+//           marker: {
+//             enabled: false
+//           }
+//         }
+//
+//       },
+//       exporting: false,
+//       xAxis: [{
+//         type: 'datetime'
+//       }],
+//       yAxis: [
+//
+//         { // Primary yAxis
+//
+//           min: 0,
+//           allowDecimals: false,
+//           title: {
+//             text: 'number of notification',
+//             style: {
+//               color: '#80a3ca'
+//             }
+//           },
+//           labels: {
+//             format: '{value}',
+//             style: {
+//               color: '#80a3ca'
+//             }
+//           }
+//
+//
+//         },
+//         { // Secondary yAxis
+//           min: 0,
+//           allowDecimals: false,
+//           title: {
+//             text: 'usage time',
+//             style: {
+//               color: '#c680ca'
+//             }
+//           },
+//           labels: {
+//             format: '{value}',
+//             style: {
+//               color: '#c680ca'
+//             }
+//           },
+//           opposite: true
+//
+//         }
+//       ],
+//
+//       legend: {
+//         enabled: false
+//       },
+//       title: {
+//         text: ' '
+//       },
+//       credits: {
+//         enabled: false
+//       },
+//
+//       loading: false,
+//       tooltip: {
+//         crosshairs: [
+//           {
+//             width: 1,
+//             dashStyle: 'dash',
+//             color: '#898989'
+//           },
+//           {
+//             width: 1,
+//             dashStyle: 'dash',
+//             color: '#898989'
+//           }
+//         ],
+//         headerFormat: '<div class="header">{point.key}</div>',
+//         pointFormat: '<div class="line"><div class="circle" style="background-color:{series.color};float:left;margin-left:10px!important;clear:left;"></div><p class="country" style="float:left;">{series.name}</p><p>{point.y:,.0f} {series.tooltipOptions.valueSuffix} </p></div>',
+//         borderWidth: 1,
+//         borderRadius: 5,
+//         borderColor: '#a4a4a4',
+//         shadow: false,
+//         useHTML: true,
+//         percentageDecimals: 2,
+//         backgroundColor: "rgba(255,255,255,.7)",
+//         style: {
+//           padding: 0
+//         },
+//         shared: true
+//
+//       },
+//
+//       series: [
+//         {
+//           id: 'iphoneNotificationData',
+//           name: 'Notifications',
+//           data: [[1426204800000, 12], [1426464000000, 6], [1426550400000, 10], [1426636800000, 3]],
+//           type: 'column',
+//           yAxis: 0,
+//           color: '#80a3ca'
+//         },
+//         {
+//           id: 'iphoneUsageData',
+//           name: 'Usage Time',
+//           data: [[1426291200000, 5], [1426809600000, 26]],
+//           type: 'line',
+//           yAxis: 1,
+//           tooltip: {
+//             valueSuffix: ' sec'
+//           },
+//           color: '#c680ca'
+//         }
+//       ],
+//
+//
+//
+//     };
+//
+//
+//   });

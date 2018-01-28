@@ -3,22 +3,16 @@ angular
   .factory('Chart', Chart);
 
 Chart.$inject = ['API', '$resource'];
-
 function Chart(API, $resource) {
-  return $resource(
-    `${API}/part2`,
-    { id: '@_id' },
-    { update: { method: 'PUT' },
-      getAlphaCharts: {
-        url: `${API}/part2`,
-        method: 'GET',
-        isArray: true
-      }
+  return new $resource('/api/part2/:id', { id: '@id' }, {
+    update: { method: 'PUT' },
+    getAlphaCharts: {
+      url: `${API}/part2`,
+      method: 'GET',
+      isArray: true
     }
-  );
+  });
 }
-
-
 
 
 

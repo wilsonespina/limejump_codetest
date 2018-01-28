@@ -1,10 +1,10 @@
-const Company = require('../models/company');
+const Chart = require('../models/chart');
 
 function indexRoute(req, res, next) {
-  Company
+  Chart
     .find()
     .exec()
-    .then((companies) => res.json(companies))
+    .then((charts) => res.json(charts))
     .catch(next);
 }
 
