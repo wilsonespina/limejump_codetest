@@ -1,11 +1,12 @@
 <section class="company-list">
 
-  <h1>Company List</h1>
+  <h1>Part 1 - Company List</h1>
   <div ng-repeat="company in part1.all">
 
-    <h2>{{ company.name }}</h2>
-    <h3>{{ company.address }}</h3>
-    <a ui-sref="part1Edit({ id: company.id })" class="btn btn-primary">Edit</a>
+    <a ui-sref="part1Edit({ id: company.id })">
+      <h2 class="company-name">{{ company.name }}</h2></a>
+      <h3 class="company-address">{{ company.address }}</h3>
+
 
   </div>
 </section>

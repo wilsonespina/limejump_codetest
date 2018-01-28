@@ -8,17 +8,17 @@ mongoose.connect(dbURI);
 Company.collection.drop();
 
 const companyData = [{
-  name: 'Adidas',
-  address: 'TEST DATA'
+  name: 'Monzo',
+  address: '230 City Rd, London EC1V 2QY'
 },{
   name: 'Limejump',
-  address: 'TEST DATA'
+  address: '39 York Rd, Lambeth, London SE1 7NQ'
 },{
-  name: 'Sony',
-  address: 'TEST DATA'
+  name: 'General Assembly',
+  address: 'The Relay Building, 114 Whitechapel High St, London E1 7PT'
 },{
-  name: 'Barclays',
-  address: 'TEST DATA'
+  name: 'Byron',
+  address: '26 Hill St, Richmond TW9 1TW'
 }];
 
 Company
