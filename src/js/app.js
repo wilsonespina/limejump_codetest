@@ -1,2 +1,4 @@
 angular
-  .module('limejump', []);
+  .module('limejump', [
+    'ui.router'
+  ]);

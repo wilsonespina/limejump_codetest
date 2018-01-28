@@ -11,13 +11,6 @@
   <!-- endinject -->
 </head>
 <body ng-controller="CompanyIndexCtrl as companyIndex">
-  <div class="wrapper">
-    <main class="container" ui-view>
-      <div ng-repeat="company in companyIndex.all" class="names">
-        <h2>{{ company.name }}</h2>
-      </div>
-    </main>
-
-  </div>
+  <main class="container" ui-view></main>
 </body>
 </html>
