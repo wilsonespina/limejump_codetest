@@ -1,7 +1,7 @@
 angular
   .module('limejump')
   .controller('CompanyIndexCtrl', CompanyIndexCtrl)
-  // .controller('CompanyShowCtrl', CompanyShowCtrl)
+  .controller('CompanyShowCtrl', CompanyShowCtrl)
   .controller('CompanyEditCtrl', CompanyEditCtrl);
 
 CompanyIndexCtrl.$inject = ['Company'];
@@ -10,17 +10,16 @@ function CompanyIndexCtrl(Company) {
   vm.all = Company.query();
 }
 
-// CompanyShowCtrl.$inject = ['Company', '$stateParams', '$state'];
-// function CompanyShowCtrl(Company, $stateParams) {
-//   const vm = this;
-//   vm.company = Company.get($stateParams);
-// }
-
+CompanyShowCtrl.$inject = ['Company', '$stateParams', '$state'];
+function CompanyShowCtrl(Company, $stateParams) {
+  const vm = this;
+  vm.company = Company.get($stateParams);
+}
 
 CompanyEditCtrl.$inject = ['Company', '$stateParams', '$state'];
 function CompanyEditCtrl(Company, $stateParams, $state) {
   const vm = this;
-  vm.company = Company.get($stateParams.id);
+  vm.company = Company.get($stateParams);
 
   function companyUpdate() {
     vm.company

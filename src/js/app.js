@@ -1,4 +1,5 @@
 angular
   .module('limejump', [
-    'ui.router'
+    'ui.router',
+    'ngResource'
   ]);
