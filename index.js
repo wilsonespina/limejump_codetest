@@ -1,10 +1,22 @@
 const express = require('express');
-const port    = process.env.PORT || 4000;
-const app     = express();
-const dest    = `${__dirname}/public`;
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+mongoose.plugin(require('./lib/globalToJSON'));
+mongoose.Promise = require('bluebird');
+const { port, env, dbURI } = require('./config/environment');
+const routes = require('./config/routes');
 
-app.use(express.static(dest));
+const app = express();
 
-app.get('/*', (req, res) => res.sendFile(`${dest}/index.html`));
+mongoose.connect(dbURI);
 
-app.listen(port, () => console.log(`Express has started on port: ${port}`));
+if(env !== 'test') app.use(morgan('dev'));
+
+app.use(express.static(`${__dirname}/public`));
+app.use(bodyParser.json());
+
+app.use('/api', routes);
+app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));
+
+app.listen(port, () => console.log(`Express is listening on port ${port}`));

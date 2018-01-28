@@ -12,6 +12,11 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'js/views/part1.html',
       controller: 'CompanyIndexCtrl as part1'
     })
+    .state('part1Edit', {
+      url: '/part1/:id/edit',
+      templateUrl: 'js/views/part1Edit.html',
+      controller: 'CompanyEditCtrl as part1Edit'
+    })
     .state('part2', {
       url: '/part2',
       templateUrl: 'js/views/part2.html',
