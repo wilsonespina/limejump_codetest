@@ -2,16 +2,9 @@ angular
   .module('limejump')
   .factory('Chart', Chart);
 
-Chart.$inject = ['API', '$resource'];
-function Chart(API, $resource) {
-  return new $resource('/api/part2/:id', { id: '@id' }, {
-    update: { method: 'PUT' },
-    getAlphaCharts: {
-      url: `${API}/part2`,
-      method: 'GET',
-      isArray: true
-    }
-  });
+Chart.$inject = ['$resource'];
+function Chart() {
+
 }
 
 

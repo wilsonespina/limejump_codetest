@@ -1,172 +1,20 @@
-// angular
-//   .module('limejump')
-//   .controller('HighchartsController', function ($scope) {
-//
-//     $scope.chartConfig = {
-//       subtitle: {
-//         text: 'Click and drag to zoom in.'
-//       },
-//       chart: {
-//         height: 500,
-//         width: 500,
-//         backgroundColor: 'transparent',
-//         zoomType: 'xy',
-//         resetZoomButton: {
-//           position: {
-//             x: 0,
-//             y: -35
-//           },
-//           theme: {
-//             fill: 'white',
-//             stroke: 'silver',
-//             r: 0,
-//             states: {
-//               hover: {
-//                 fill: '#41739D',
-//                 style: {
-//                   color: 'white'
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       },
-//       navigator: {
-//         enabled: true,
-//         series: {
-//           data: []
-//         }
-//       },
-//       rangeSelector: {
-//         enabled: false
-//       },
-//       plotOptions: {
-//         series: {
-//           lineWidth: 1,
-//           fillOpacity: 0.5
-//
-//         },
-//         column: {
-//           stacking: 'normal'
-//         },
-//         area: {
-//           stacking: 'normal',
-//           marker: {
-//             enabled: false
-//           }
-//         }
-//
-//       },
-//       exporting: false,
-//       xAxis: [{
-//         type: 'datetime'
-//       }],
-//       yAxis: [
-//
-//         { // Primary yAxis
-//
-//           min: 0,
-//           allowDecimals: false,
-//           title: {
-//             text: 'number of notification',
-//             style: {
-//               color: '#80a3ca'
-//             }
-//           },
-//           labels: {
-//             format: '{value}',
-//             style: {
-//               color: '#80a3ca'
-//             }
-//           }
-//
-//
-//         },
-//         { // Secondary yAxis
-//           min: 0,
-//           allowDecimals: false,
-//           title: {
-//             text: 'usage time',
-//             style: {
-//               color: '#c680ca'
-//             }
-//           },
-//           labels: {
-//             format: '{value}',
-//             style: {
-//               color: '#c680ca'
-//             }
-//           },
-//           opposite: true
-//
-//         }
-//       ],
-//
-//       legend: {
-//         enabled: false
-//       },
-//       title: {
-//         text: ' '
-//       },
-//       credits: {
-//         enabled: false
-//       },
-//
-//       loading: false,
-//       tooltip: {
-//         crosshairs: [
-//           {
-//             width: 1,
-//             dashStyle: 'dash',
-//             color: '#898989'
-//           },
-//           {
-//             width: 1,
-//             dashStyle: 'dash',
-//             color: '#898989'
-//           }
-//         ],
-//         headerFormat: '<div class="header">{point.key}</div>',
-//         pointFormat: '<div class="line"><div class="circle" style="background-color:{series.color};float:left;margin-left:10px!important;clear:left;"></div><p class="country" style="float:left;">{series.name}</p><p>{point.y:,.0f} {series.tooltipOptions.valueSuffix} </p></div>',
-//         borderWidth: 1,
-//         borderRadius: 5,
-//         borderColor: '#a4a4a4',
-//         shadow: false,
-//         useHTML: true,
-//         percentageDecimals: 2,
-//         backgroundColor: "rgba(255,255,255,.7)",
-//         style: {
-//           padding: 0
-//         },
-//         shared: true
-//
-//       },
-//
-//       series: [
-//         {
-//           id: 'iphoneNotificationData',
-//           name: 'Notifications',
-//           data: [[1426204800000, 12], [1426464000000, 6], [1426550400000, 10], [1426636800000, 3]],
-//           type: 'column',
-//           yAxis: 0,
-//           color: '#80a3ca'
-//         },
-//         {
-//           id: 'iphoneUsageData',
-//           name: 'Usage Time',
-//           data: [[1426291200000, 5], [1426809600000, 26]],
-//           type: 'line',
-//           yAxis: 1,
-//           tooltip: {
-//             valueSuffix: ' sec'
-//           },
-//           color: '#c680ca'
-//         }
-//       ],
-//
-//
-//
-//     };
-//
-//
-//   });
+angular
+  .module('limejump')
+  .controller('ChartCtrl', ChartCtrl);
+
+function ChartCtrl($scope) {
+//Sample options for first chart
+  $scope.chartOptions = {
+    title: {
+      text: 'Test data'
+    },
+    xAxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+      data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }]
+  };
+}

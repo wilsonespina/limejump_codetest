@@ -20,7 +20,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('part2', {
       url: '/part2',
       templateUrl: 'js/views/part2.html',
-      controller: 'ChartIndexCtrl as part2'
+      controller: 'ChartCtrl as part2'
     });
 
   $urlRouterProvider.otherwise('/part1');
