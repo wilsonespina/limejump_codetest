@@ -1,7 +1,7 @@
 {
   "name": "limejump-code-test",
   "version": "1.0.0",
-  "description": "Front end code test for Limejump",
+  "description": "Limejump Front End test part 1",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install && gulp deploy"

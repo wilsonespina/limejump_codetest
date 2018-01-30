@@ -1,10 +1,12 @@
+<section class="company-banner">
+  <div class="page-hero"></div>
+</section>
+
 <section class="company-list">
   <h1>Part 1 - Company List</h1>
   <div ng-repeat="company in part1.all">
-
     <a ui-sref="part1Edit({ id: company.id })">
       <h2 class="company-name">{{ company.name }}</h2></a>
-      <h3 class="company-address">{{ company.address }}</h3>
-
+    <h3 class="company-address">{{ company.address }}</h3>
   </div>
 </section>
