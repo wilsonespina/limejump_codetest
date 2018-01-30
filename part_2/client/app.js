@@ -168,7 +168,7 @@ $(function() {
       },
 
       title: {
-        text: ' Stock Price History'
+        text: ' Part 2 - Stock Price History'
       },
 
       subtitle: {
@@ -214,7 +214,7 @@ $(function() {
         {
           type: 'line',
           name: 'SMA',
-          color: 'green',
+          color: '#1dbf28',
           data: sma,
           tooltip: {
             valueDecimals: 2
