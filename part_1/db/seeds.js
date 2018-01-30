@@ -19,6 +19,9 @@ const companyData = [{
 },{
   name: 'Byron',
   address: '26 Hill St, Richmond TW9 1TW'
+},{
+  name: 'National Grid',
+  address: '1 - 3 Strand, London, WC2N 5EH'
 }];
 
 Company
