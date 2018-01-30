@@ -4,8 +4,8 @@
 Submission of Front End test by Wilson Espina
 
 
-
 ##Deploying the code
+
 
 ###PART 1
 
@@ -14,6 +14,7 @@ Submission of Front End test by Wilson Espina
 3. `npm install` or `yarn` to install dependancies
 4. Run `node db/seeds` to seed copmany data
 4. Run `gulp` to view in browser
+
 
 ###PART 2
 
