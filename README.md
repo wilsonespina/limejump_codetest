@@ -4,10 +4,10 @@
 Submission of Front End test by Wilson Espina
 
 
-##Deploying the code
+## Deploying the code
 
 
-###PART 1
+### PART 1
 
 1. From Terminal CLI, `cd` into `part_1` project folder
 2. run `mongod`
@@ -16,7 +16,7 @@ Submission of Front End test by Wilson Espina
 4. Run `gulp` to view in browser
 
 
-###PART 2
+### PART 2
 
 1. `cd` into `part_2` project folder
 2. `npm install` or `yarn` to install dependancies
